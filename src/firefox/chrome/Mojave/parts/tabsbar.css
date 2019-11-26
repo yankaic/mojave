@@ -20,7 +20,7 @@ tab > stack {
 }
 
 #TabsToolbar .toolbar-items {
-	margin-bottom: -1px !important;
+	margin-bottom: 0 !important;
 }
 
 /* Remove hover effects on tab bar buttons */
@@ -61,7 +61,7 @@ tab > stack {
 tab {
 	color: var(--gnome-tabbar-tab-color) !important;
 	font-family: Cantarell, inherit;
-	font-weight: bold;
+	font-weight: regular;
 	font-size: 1em;
 }
 tab:hover {
@@ -79,11 +79,9 @@ tab[selected]:-moz-window-inactive {
 
 /* Center all inside tab */
 .tab-content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: left;
+	align-items: left;
 	margin-top: -1px;
-	min-width: 100% !important;
 	padding: 0 10px !important;
 }
 
@@ -111,10 +109,10 @@ tab[selected]:-moz-window-inactive {
 
 /* Force tab favicon to the center */
 .tab-throbber, .tab-throbber-fallback {
-	margin-left: auto;
+	margin-left: 0;
 }
 .tabbrowser-tab:not([busy]) .tab-icon-image {
-	margin-left: auto;
+	margin-left: 0;
 }
 
 /* If tab favicon is not present, force tab label to the center */
@@ -232,19 +230,15 @@ tab[selected]:-moz-window-inactive {
 :root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
 	background-color: var(--gnome-tabbar-tab-hover-background) !important;
 	border: 1px solid var(--gnome-headerbar-border-color) !important;
+	margin: 0 -2px !important;
 	border-image: none !important;
 	border-top: none !important;
-}
-
-/* Tabs scroll buttons hover */
-#TabsToolbar .scrollbutton-up:not([disabled]):hover, #TabsToolbar .scrollbutton-down:not([disabled]):hover {
-	background-color: var(--gnome-tabbar-tab-active-hover-background) !important;
 }
 
 /* Full width tabs */
 .tabbrowser-tab:not([style^="max-width"]):not([pinned]),
 .tabbrowser-tab[style^="max-width: 100px !important;"]:not([pinned]) {
-	max-width: 100% !important;
+	max-width: 200px !important;
 }
 
 .tabbrowser-tab:not([style^="max-width"]):not([pinned]):not([fadein]),
