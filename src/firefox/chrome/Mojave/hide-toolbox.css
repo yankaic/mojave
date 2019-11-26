@@ -1,0 +1,7 @@
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#navigator-toolbox {
+	border: 0 !important;
+	background: none !important;
+	visibility:collapse;
+}
